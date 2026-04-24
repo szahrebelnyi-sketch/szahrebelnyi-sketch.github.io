@@ -1,5 +1,11 @@
 const internalLinkSelector = 'a[href$=".html"], a[href="index.html"]';
 const sharedVisualPages = new Set(["index.html", "contact.html"]);
+const navLinks = [
+  { href: "index.html", label: "About" },
+  { href: "case-studies.html", label: "Case Studies" },
+  { href: "services.html", label: "Services" },
+  { href: "contact.html", label: "Contact" },
+];
 const networkVisualMarkup = `
 <svg class="hero-network-svg" viewBox="0 0 760 760" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -73,6 +79,34 @@ const networkVisualMarkup = `
   </circle>
 </svg>
 `;
+
+function renderSiteHeader() {
+  const currentPage = normalizePageName(window.location.pathname);
+  const navMarkup = navLinks
+    .map(({ href, label }) => {
+      const isActive = normalizePageName(href) === currentPage;
+      return `<a class="topbar-link${isActive ? " is-active" : ""}" href="${href}">${label}</a>`;
+    })
+    .join("");
+
+  document.querySelectorAll("site-header").forEach((host) => {
+    host.innerHTML = `
+      <header class="topbar">
+        <div class="page topbar-inner">
+          <a class="brand" href="index.html" aria-label="Go to homepage">
+            <img class="brand-logo" src="LOGO_ZD_LOGO_ZD_Black.png" alt="Zahrebelnyi logo" />
+            <div class="brand-text">
+              <span class="brand-primary">Zahrebelnyi</span>
+            </div>
+          </a>
+          <nav class="topbar-nav" aria-label="Primary navigation">
+            ${navMarkup}
+          </nav>
+        </div>
+      </header>
+    `;
+  });
+}
 
 function injectNetworkVisuals() {
   const hosts = document.querySelectorAll("[data-network-visual]");
@@ -305,6 +339,7 @@ function bindServiceToggles() {
           panel.hidden = true;
           stage.classList.remove("is-closing");
           stage.hidden = true;
+          stage.setAttribute("aria-hidden", "true");
           stage.style.height = "";
           panelHideTimers.delete(panel);
         });
@@ -330,6 +365,7 @@ function bindServiceToggles() {
         const isOpeningFromClosedState = !currentPanel;
 
         stage.hidden = !activeKey;
+        stage.setAttribute("aria-hidden", String(!activeKey));
         stage.classList.remove("is-closing");
 
         panels.forEach((panel) => {
@@ -498,6 +534,7 @@ document.addEventListener("click", (event) => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  renderSiteHeader();
   injectNetworkVisuals();
   bindCopyEmail();
   bindServiceToggles();
