@@ -1,0 +1,75 @@
+<svg class="hero-network-svg" viewBox="0 0 760 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid-squares" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="rgba(13,13,13,0.08)" stroke-width="1" />
+    </pattern>
+    <path id="flow-a" d="M120 620H260V490H388V380" />
+    <path id="flow-b" d="M260 682V544H388V380" />
+    <path id="flow-c" d="M144 300H288V380H388" />
+    <path id="flow-d" d="M648 474H536V380H388" />
+    <path id="flow-e" d="M420 116V246H388V380" />
+    <path id="flow-f" d="M630 312H520V380H388" />
+  </defs>
+
+  <rect x="36" y="40" width="684" height="664" fill="url(#grid-squares)" />
+
+  <path d="M120 620H260V490H388V380" class="network-link" />
+  <path d="M260 682V544H388V380" class="network-link" />
+  <path d="M144 300H288V380H388" class="network-link" />
+  <path d="M648 474H536V380H388" class="network-link" />
+  <path d="M420 116V246H388V380" class="network-link" />
+  <path d="M630 312H520V380H388" class="network-link" />
+  <path d="M230 412H142V530" class="network-link" />
+  <path d="M520 380H630V312" class="network-link" />
+  <text x="84" y="608" class="network-label">Strategy</text>
+  <text x="572" y="518" class="network-label">Design</text>
+  <text x="102" y="288" class="network-label">Content</text>
+  <text x="382" y="102" class="network-label">System</text>
+  <text x="566" y="300" class="network-label">Growth</text>
+  <circle cx="388" cy="380" r="6" class="network-node network-node-accent network-node-center" />
+
+  <circle cx="120" cy="620" r="4" class="network-node" />
+  <circle cx="260" cy="620" r="4" class="network-node" />
+  <circle cx="260" cy="490" r="4" class="network-node network-node-accent" />
+  <circle cx="260" cy="682" r="4" class="network-node" />
+  <circle cx="460" cy="544" r="4" class="network-node" />
+  <circle cx="144" cy="300" r="4" class="network-node" />
+  <circle cx="288" cy="204" r="4" class="network-node" />
+  <circle cx="420" cy="116" r="4" class="network-node" />
+  <circle cx="536" cy="474" r="4" class="network-node" />
+  <circle cx="648" cy="474" r="4" class="network-node" />
+  <circle cx="610" cy="430" r="4" class="network-node" />
+  <circle cx="630" cy="312" r="4" class="network-node" />
+  <circle cx="142" cy="530" r="4" class="network-node" />
+
+  <circle r="5" class="network-pulse">
+    <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#flow-a" />
+    </animateMotion>
+  </circle>
+  <circle r="4" class="network-pulse network-pulse-accent">
+    <animateMotion dur="8.5s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#flow-b" />
+    </animateMotion>
+  </circle>
+  <circle r="4" class="network-pulse">
+    <animateMotion dur="6.2s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#flow-c" />
+    </animateMotion>
+  </circle>
+  <circle r="3.5" class="network-pulse network-pulse-accent">
+    <animateMotion dur="9s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#flow-d" />
+    </animateMotion>
+  </circle>
+  <circle r="4" class="network-pulse">
+    <animateMotion dur="6.8s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#flow-e" />
+    </animateMotion>
+  </circle>
+  <circle r="3.5" class="network-pulse network-pulse-accent">
+    <animateMotion dur="7.6s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#flow-f" />
+    </animateMotion>
+  </circle>
+</svg>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Zahrebelnyi Serhii</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="page-transition">
+    <header class="topbar">
+      <div class="page topbar-inner">
+        <a class="brand" href="index.html" aria-label="Go to homepage">
+          <img class="brand-logo" src="LOGO_ZD_LOGO_ZD_Black.png" alt="Zahrebelnyi logo" />
+          <div class="brand-text">
+            <span class="brand-primary">Zahrebelnyi</span>
+          </div>
+        </a>
+        <nav class="topbar-nav" aria-label="Primary navigation">
+          <a class="topbar-link" href="index.html">About</a>
+          <a class="topbar-link" href="case-studies.html">Case Studies</a>
+          <a class="topbar-link is-active" href="servise.html">Services</a>
+          <a class="topbar-link" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page page-main page-scene">
+      <section class="page-hero service-page-hero">
+        <h1 class="hero-title service-page-hero-title">
+          <span class="hero-title-line">THREE WAYS TO COLLABORATE</span>
+        </h1>
+        <div class="page-intro">
+          <h2 class="hero-subtitle">
+            From focused execution<br />
+            to long-term creative support.
+          </h2>
+
+          <h3 class="hero-tertiary">
+            Built for brands that value clarity,
+            <span class="hero-tertiary-break">consistency, and thoughtful growth.</span>
+          </h3>
+        </div>
+        <div class="service-hero-roles" aria-label="Collaboration formats">
+          <div class="service-hero-roles-stage" data-service-hero-stage>
+            <div class="service-hero-core" aria-hidden="true">
+              <img class="service-hero-core-photo" src="./portrait_pro_site.png" alt="Portrait of Zahrebelnyi" />
+            </div>
+            <div class="service-hero-orbit" data-service-hero-orbit>
+              <span class="service-hero-node service-hero-node-project" data-service-hero-role data-role-key="project" style="--role-index: 0;">
+                <span class="service-hero-node-label">Project</span>
+              </span>
+              <span class="service-hero-node" data-service-hero-role data-role-key="part-time" style="--role-index: 1;">
+                <span class="service-hero-node-label">Part-time</span>
+              </span>
+              <span class="service-hero-node" data-service-hero-role data-role-key="full-time" style="--role-index: 2;">
+                <span class="service-hero-node-label">Full-time</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" data-toggle-group>
+        <div class="content-grid">
+          <article class="content-card">
+            <button
+              class="button button-primary service-toggle"
+              type="button"
+              data-service-toggle
+              data-service-key="project-based"
+              aria-expanded="false"
+              aria-controls="service-stage-project-based"
+            >
+              <span class="button-label" data-text="Project Execution">Project Execution</span>
+              <img class="service-toggle-logo" src="LOGO_ZD_LOGO_ZD_White.png" alt="" aria-hidden="true" />
+            </button>
+            <p>Focused support for launches, campaigns, and one-off creative needs.</p>
+          </article>
+          <article class="content-card">
+            <button
+              class="button button-primary service-toggle"
+              type="button"
+              data-service-toggle
+              data-service-key="ongoing-support"
+              aria-expanded="false"
+              aria-controls="service-stage-ongoing-support"
+            >
+              <span class="button-label" data-text="Creative Retainer">Creative Retainer</span>
+              <img class="service-toggle-logo" src="LOGO_ZD_LOGO_ZD_White.png" alt="" aria-hidden="true" />
+            </button>
+            <p>Ongoing creative support for brands that need consistency across content and design.</p>
+          </article>
+          <article class="content-card">
+            <button
+              class="button button-primary service-toggle"
+              type="button"
+              data-service-toggle
+              data-service-key="full-system"
+              aria-expanded="false"
+              aria-controls="service-stage-full-system"
+            >
+              <span class="button-label" data-text="Growth System">Growth System</span>
+              <img class="service-toggle-logo" src="LOGO_ZD_LOGO_ZD_White.png" alt="" aria-hidden="true" />
+            </button>
+            <p>A complete creative system built to connect strategy, content, and execution.</p>
+          </article>
+
+          <h4 class="service-stage-helper">
+            Not sure which format fits best? The right structure depends on your goals, timeline,
+            and level of support needed.
+          </h4>
+
+          <article class="service-stage" data-service-stage aria-hidden="true" hidden>
+            <div class="service-stage-panel" id="service-stage-project-based" data-service-panel="project-based" hidden>
+              <div class="service-stage-layout">
+                <div class="service-stage-copy">
+                  <h2>Move with clarity.</h2>
+                  <p class="service-stage-description">
+                    A streamlined way to deliver high-quality creative for a specific moment,
+                    without unnecessary process or delay. Ideal for launches, campaigns, and
+                    time-sensitive creative work.
+                  </p>
+                  <ul class="service-details">
+                    <li>Graphic design</li>
+                    <li>Ad creatives</li>
+                    <li>Social media visuals</li>
+                    <li>Presentations</li>
+                    <li>Reels and short-form video</li>
+                    <li>Motion and animation</li>
+                  </ul>
+                </div>
+                <div class="service-stage-media" aria-label="Project-Based media area">
+                  <div class="service-stage-media-frame">
+                    <span class="service-stage-media-label">Image or video area</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-stage-panel" id="service-stage-ongoing-support" data-service-panel="ongoing-support" hidden>
+              <div class="service-stage-layout">
+                <div class="service-stage-copy">
+                  <h2>Stay present. Stay consistent.</h2>
+                  <p class="service-stage-description">
+                    A long-term creative partnership designed to keep your brand active, aligned,
+                    and visually strong across every channel. Designed for brands that need steady
+                    output and a cohesive presence.
+                  </p>
+                  <ul class="service-details">
+                    <li>Monthly design support</li>
+                    <li>Content production for posts, reels, and stories</li>
+                    <li>Content planning and structure</li>
+                    <li>Priority workflow</li>
+                    <li>Visual consistency across channels</li>
+                    <li>Ongoing refinement and iteration</li>
+                  </ul>
+                </div>
+                <div class="service-stage-media" aria-label="Ongoing Support media area">
+                  <div class="service-stage-media-frame">
+                    <span class="service-stage-media-label">Image or video area</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-stage-panel" id="service-stage-full-system" data-service-panel="full-system" hidden>
+              <div class="service-stage-layout">
+                <div class="service-stage-copy">
+                  <h2>Build with intention. Scale with structure.</h2>
+                  <p class="service-stage-description">
+                    A full creative framework where strategy informs content, and content supports
+                    sustainable brand growth. Best suited for brands ready to build a more
+                    complete and scalable system.
+                  </p>
+                  <ul class="service-details">
+                    <li>Brand and content strategy</li>
+                    <li>Content planning</li>
+                    <li>Creative direction</li>
+                    <li>Design execution</li>
+                    <li>Video, motion, and AI-assisted creatives</li>
+                    <li>Structured growth support</li>
+                  </ul>
+                </div>
+                <div class="service-stage-media" aria-label="Full System media area">
+                  <div class="service-stage-media-frame">
+                    <span class="service-stage-media-label">Image or video area</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>
